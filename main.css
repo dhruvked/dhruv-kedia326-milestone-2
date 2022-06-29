@@ -1,15 +1,61 @@
 body{
-    background-color: rgb(5, 5, 34)
+    display: inline-block;
+    margin-left: 30%;
+    background-color:beige;
+    border: 1px solid;
 }
 
-#canvas-container{
+#grid-container{
     display:flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+canvas{
+    background-color: white;
+    margin: 0%;
+}
+
+#slidecontainer{
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-canvas{
-    background-color: aqua;
-    margin: 0%;
+input{
+    background-color: beige;
+    align-items: center;
+    justify-content:center;
+}
 
+
+#testerS,#testerY{
+    margin: 4px;
+    width: 30px;
+    text-align: center;
+}
+
+#explain-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    background-color: gray;
+    border: 1px solid;
+    border-collapse: collapse;
+    color: beige;
+    
+}
+th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 70px;
+    text-align: center;
+}
+
+#explain-contain canvas{
+    background-color: beige;
 }
