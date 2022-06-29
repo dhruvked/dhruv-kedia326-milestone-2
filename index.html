@@ -1,19 +1,128 @@
+
 <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="main.css">
-     <title>Lines</title>
- </head>
- <body>
-     <div id="canvas-container" height="520px" width="520px">
-         <canvas id="canvas" height="500px" width="500px" text-align="center"></canvas>
-     </div>
-     <div class="slidecontainer">
-         <input type="range" min="4" max="5" value="0" class="slider" id="slopeRange">
-     </div>
-     <script src="canvas.js"></script>
- </body>
- </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lines</title>
+</head>
+<body>
+    <div id="grid-container" height="520px" width="520px">
+        <table>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                <tr>
+                <tr>
+                    <td><output id="x0"></output></td>
+                    <td><output id="y0"></output></td>
+                <tr>
+                    <td><output id="x1"></output></td>
+                    <td><output id="y1"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x2"></output></td>
+                    <td><output id="y2"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x3"></output></td>
+                    <td><output id="y3"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x4"></output></td>
+                    <td><output id="y4"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x5"></output></td>
+                    <td><output id="y5"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x6"></output></td>
+                    <td><output id="y6"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x7"></output></td>
+                    <td><output id="y7"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x8"></output></td>
+                    <td><output id="y8"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x9"></output></td>
+                    <td><output id="y9"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x10"></output></td>
+                    <td><output id="y10"></output></td>
+                </tr>
+                    <td><output id="x11"></output></td>
+                    <td><output id="y11"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x12"></output></td>
+                    <td><output id="y12"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x13"></output></td>
+                    <td><output id="y13"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x14"></output></td>
+                    <td><output id="y14"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x15"></output></td>
+                    <td><output id="y15"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x16"></output></td>
+                    <td><output id="y16"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x17"></output></td>
+                    <td><output id="y17"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x18"></output></td>
+                    <td><output id="y18"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x19"></output></td>
+                    <td><output id="y19"></output></td>
+                </tr>
+                <tr>
+                    <td><output id="x20"></output></td>
+                    <td><output id="y20"></output></td>
+                </tr>
+        </table>
+        <canvas id="canvas1" height="500px" width="500px" text-align="center"></canvas>
+    </div>
+    <div id="slidecontainer">
+        <label>Slope</label>
+        <input type="range" min="-5" max="5" value="0" step="0.01" class="slider" id="slopeRange" oninput="fetchSlope(this)">
+        <input type="text" id="testerS" value="0" oninput="revfetchS(this)">
+        <label>Y-intercept</label>
+        <input type="range" min="-10" max="10" value="0" step="0.01" class="slider" id="yRange" oninput="fetchY(this)">
+        <input type="text" id="testerY" value="0" oninput="revfetchY(this)">
+    </div>
+    <div id="explain-contain">
+        <canvas id="canvas2">
+                <p id="e0"></p>
+                <p id="e1">LINE-EQUATION:  y=mx+b.</p>
+                <p id="e11">Where y and x are points on a line & m is the slope whereas b is the Y-intercept.</p>
+                <p id="e2">Slope=It is basically the change in the y-coordinate of a point on the line with respect to the x-coordinate.</p>
+                <p id="e3">For Example:- Assume first point is (2,3) and slope is 2. Then after x increases by 1, y increaases by 2.</p>
+                <p id="e4">Y-intercept=It is the y-coordinate of a point on the line when the x-coordinate is ZERO</p>
+                <p id="e5">For Example:-In the previous example, we know x,y and slope. We can calculate the b and find that it is y of the point on the line when x=0 i.e when it goes through the y-axis. </p>
+                <p id="e6">To understand the concept better you can play around with the sliders, initially set to go through origin</p>
+                <p id="e7">Or click on two points on the graph and it should give you a line with slope and intercept.</p>
+        </canvas>
+        <input type="button" value="NEXT" id="N" onclick="next()">
+        <input type="button" value="PREVIOUS" id="P" onclick="prev()">
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>
