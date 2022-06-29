@@ -15,6 +15,6 @@
     </li>
     <li>
         <h2>Image of completed Web Page</h2>
-        <img src='Screenshot 2022-06-29 at 3.12.44 PM.png'>
+        <img src='https://github.com/dhruvked/dhruv-kedia326-milestone-2/blob/a04fcba57809424cca744cf86894615dc374e741/Screenshot 2022-06-29 at 3.12.44 PM.png'>
     </li>
 </ol>
