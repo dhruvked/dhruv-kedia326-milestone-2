@@ -7,12 +7,14 @@ body{
 
 #grid-container{
     display:flex;
+    align-items: center;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
 canvas{
+    background-color: aqua;
     background-color: white;
     margin: 0%;
 }
@@ -28,7 +30,6 @@ input{
     align-items: center;
     justify-content:center;
 }
-
 
 #testerS,#testerY{
     margin: 4px;
